@@ -1,0 +1,67 @@
+.input {
+  padding: 12px 19px;
+  width: 100%;
+  border: 1px solid var(--color-gray-dark);
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+
+  &:focus {
+    outline: 0;
+    border-color: var(--color-cyan-dark);
+  }
+
+  &:invalid {
+    border-color: var(--color-red);
+    box-shadow: 0 0 10px 0 rgba(255, 89, 89, 0.2);
+  }
+}
+
+.invalid {
+  border-color: var(--color-red);
+  box-shadow: 0 0 10px 0 rgba(255, 89, 89, 0.2);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  column-gap: 17px;
+}
+
+.checkbox {
+  appearance: none;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: 1px solid var(--color-black);
+  transition: var(--transition);
+  cursor: pointer;
+  flex-shrink: 0;
+
+  &::after {
+    content: '';
+    background-image: url('../../assets/icons/checkmark.png');
+    background-position: center;
+    background-size: 14px;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    transition: 0.3s;
+    overflow: hidden;
+  }
+
+  &:checked::after {
+    width: 18px;
+    height: 18px;
+    transition: 0.3s;
+  }
+}
+
+.label {
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  user-select: none;
+}

@@ -1,0 +1,207 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 335px;
+  max-width: 415px;
+  width: 100%;
+  border-radius: var(--border-radius-large);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.beginnerActive {
+  border: 2px solid var(--color-gold);
+}
+
+.proActive {
+  border: 2px solid var(--color-cyan);
+}
+
+.businessActive {
+  border: 2px solid var(--color-black);
+}
+
+.header {
+  padding: 30px 30px 34px;
+
+  @media screen and (max-width: 1170px) {
+    padding-inline: 24px;
+  }
+}
+
+.beginner {
+  background-color: var(--color-gold);
+  background-image: url('../../../../assets/images/beginner-bg.svg');
+  background-repeat: no-repeat;
+  background-position: 98% 11px;
+  background-size: 92px 83px;
+
+  @media screen and (max-width: 400px) {
+    background-size: 59px 53px;
+  }
+}
+
+.pro {
+  background-color: var(--color-cyan);
+  background-image: url('../../../../assets/images/pro-bg.svg');
+  background-repeat: no-repeat;
+  background-position: 98%;
+  background-size: 94px 104px;
+
+  @media screen and (max-width: 400px) {
+    background-position: 98% 0;
+    background-size: 68px 78px;
+  }
+}
+
+.business {
+  color: var(--color-white);
+  background-color: var(--color-black);
+  background-image: url('../../../../assets/images/business-bg.svg');
+  background-repeat: no-repeat;
+  background-position: 99% 27px;
+  background-size: 96px 80px;
+
+  @media screen and (max-width: 400px) {
+    background-position: 99% 15px;
+    background-size: 73px 61px;
+  }
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 30px;
+
+  @media screen and (max-width: 1170px) {
+    font-size: 20px;
+    margin-bottom: 22px;
+  }
+}
+
+.subtitle {
+  margin: 0;
+}
+
+.body {
+  position: relative;
+  padding: 33px 14px 24px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 60px;
+  height: 100%;
+
+  @media screen and (max-width: 1170px) {
+    padding: 20px 0 17px 24px;
+  }
+}
+
+.currentRate {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  padding: 3px 13px;
+  font-size: 14px;
+  color: var(--color-white);
+  border-radius: var(--border-radius-large);
+  background-color: var(--color-blue);
+
+  @media screen and (max-width: 1170px) {
+    top: 5px;
+    right: 5px;
+  }
+}
+
+.price {
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 30px;
+
+  .oldPrice {
+    margin-left: 19px;
+    font-size: 25px;
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
+}
+
+.deferredPayment {
+  margin: 0;
+}
+
+.descriptionTitle {
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 500;
+
+  @media screen and (max-width: 1170px) {
+    font-size: 18px;
+  }
+}
+
+.descriptionList {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+
+  @media screen and (max-width: 1170px) {
+    row-gap: 8px;
+    font-size: 16px;
+  }
+
+  .item {
+    display: flex;
+    column-gap: 8px;
+    align-items: center;
+
+    @media screen and (max-width: 1170px) {
+      column-gap: 6px;
+    }
+
+    &:before {
+      content: '';
+      display: inline-flex;
+      width: 22px;
+      height: 22px;
+      background-image: url('../../../../assets/icons/checkmark.png');
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      background-size: 20px;
+
+      @media screen and (max-width: 1170px) {
+        width: 16px;
+        height: 20px;
+        background-size: 16px 20px;
+      }
+    }
+  }
+}
+
+.footer {
+  padding: 25px 30px 26px;
+
+  @media screen and (max-width: 1170px) {
+    padding: 20px 24px 30px;
+  }
+}
+
+.button {
+  padding: 18px 10px;
+  width: 100%;
+  font-size: 20px;
+  color: var(--color-white);
+  background-color: var(--color-purple);
+
+  @media screen and (max-width: 1170px) {
+    font-size: 18px;
+  }
+}
+
+.activeButton {
+  color: var(--color-black);
+  background-color: var(--color-gray);
+}

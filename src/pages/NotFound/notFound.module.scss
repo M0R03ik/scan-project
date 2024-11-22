@@ -1,0 +1,18 @@
+.title {
+  margin-block: 30px;
+}
+
+.link {
+  padding: 4px 10px;
+  color: var(--color-black);
+  opacity: 1;
+
+  border-radius: var(--border-radius);
+
+  background-color: var(--color-cyan);
+
+  &:hover {
+    color: var(--color-black);
+    background-color: var(--color-cyan-dark);
+  }
+}

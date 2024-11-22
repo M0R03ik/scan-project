@@ -1,0 +1,253 @@
+@use '../../mixins';
+
+.body {
+  position: relative;
+  margin-bottom: 47px;
+  background: url('../../assets/images/search-bg-folders.svg') top 81px left
+    1135px / 140px 68px no-repeat;
+
+  @media screen and (max-width: 500px) {
+    margin-bottom: 21px;
+  }
+}
+
+.bodyImage {
+  position: absolute;
+  width: 91px;
+  height: 111px;
+  top: 63px;
+  left: 878px;
+  background-image: url('../../assets/images/search-bg-document.svg');
+
+  @media screen and (max-width: 1090px) {
+    left: auto;
+    right: 0;
+  }
+
+  @media screen and (max-width: 850px) {
+    width: 58px;
+    height: 71px;
+    background-size: 58px 71px;
+  }
+}
+
+.mainTitle {
+  @include mixins.visually-hidden;
+}
+
+.title {
+  margin-bottom: 25px;
+  font-size: 40px;
+  letter-spacing: 0.03em;
+  max-width: 817px;
+
+  @media screen and (max-width: 850px) {
+    font-size: 28px;
+  }
+
+  @media screen and (max-width: 620px) {
+    max-width: 277px;
+  }
+}
+
+.description {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+
+  @media screen and (max-width: 850px) {
+    font-size: 18px;
+  }
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  column-gap: 10px;
+  margin-bottom: 64px;
+
+  @media screen and (max-width: 1300px) {
+    flex-direction: column;
+    row-gap: 24px;
+    align-items: flex-start;
+  }
+
+  @media screen and (max-width: 770px) {
+    margin-bottom: 24px;
+  }
+}
+
+.searchForm {
+  padding: 21px 40px 32px 44px;
+  max-width: 872px;
+  display: flex;
+  column-gap: 11px;
+  border-radius: var(--border-radius-large);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+
+  @media screen and (max-width: 770px) {
+    flex-direction: column;
+    row-gap: 40px;
+    max-width: none;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 24px 14px 37px;
+    letter-spacing: 0.02em;
+  }
+}
+
+.mainBlock {
+  display: flex;
+  flex-direction: column;
+  row-gap: 11px;
+  max-width: 372px;
+
+  @media screen and (max-width: 770px) {
+    max-width: none;
+  }
+}
+
+.searchItem {
+  label {
+    display: block;
+    margin-bottom: 20px;
+    letter-spacing: 0.03em;
+  }
+
+  Input {
+    max-width: 242px;
+
+    @media screen and (max-width: 770px) {
+      max-width: none;
+    }
+  }
+}
+
+.error {
+  margin-top: 2px;
+  font-size: 14px;
+  color: var(--color-red);
+  text-align: center;
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.selectWrapper {
+  position: relative;
+  max-width: 242px;
+
+  @media screen and (max-width: 770px) {
+    max-width: none;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 15px;
+    width: 20px;
+    height: 100%;
+    background-image: url('../../assets/icons/arrow-down.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    pointer-events: none;
+  }
+}
+
+.selectList {
+  appearance: none;
+  padding: 13px 19px;
+  width: 100%;
+  font-size: 14px;
+  border: 1px solid var(--color-gray-dark);
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
+
+  &:focus {
+    outline: 0;
+    border-color: var(--color-cyan-dark);
+  }
+}
+
+.dateBlock {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20px;
+
+  @media screen and (max-width: 920px) {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+}
+
+.additionalWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 145px;
+  margin-top: 15px;
+
+  @media screen and (max-width: 1300px) {
+    row-gap: 32px;
+  }
+
+  @media screen and (max-width: 770px) {
+    margin-top: 0;
+  }
+}
+
+.additionalBlock {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  border: none;
+
+  @media screen and (max-width: 770px) {
+    display: none;
+  }
+}
+
+.additionalControls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: flex-end;
+  row-gap: 10px;
+  max-width: 305px;
+  width: 100%;
+
+  @media screen and (max-width: 770px) {
+    max-width: none;
+  }
+}
+
+.searchButton {
+  padding: 16px;
+  width: 100%;
+
+  @media screen and (max-width: 450px) {
+    font-size: 20px;
+  }
+}
+
+.formDescription {
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: var(--color-gray-dark);
+}
+
+.aside {
+  max-width: 442px;
+}
+
+.bgImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

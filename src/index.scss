@@ -1,0 +1,107 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('./fonts/Inter-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./fonts/Inter-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./fonts/Inter-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ferry';
+  src: url('./fonts/Ferry-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-family: 'Inter', sans-serif;
+  --second-family: 'Ferry', sans-serif;
+
+  --color-black: #000;
+  --color-white: #fff;
+  --color-cyan-dark: #029491;
+  --color-cyan: #7ce3e1;
+  --color-gold: #ffb64f;
+  --color-purple: #5970ff;
+  --color-gray-light: #d9d9d9;
+  --color-gray: #d2d2d2;
+  --color-gray-dark: #c7c7c7;
+  --color-green: #8ac540;
+  --color-blue: #3ba5e0;
+  --color-red: #ff5959;
+
+  --transition: all 0.3s;
+
+  --border-radius: 5px;
+  --border-radius-large: 10px;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: var(--color-black);
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-family: var(--second-family);
+  font-weight: 900;
+  font-size: 60px;
+  letter-spacing: 0.01em;
+}
+
+h2 {
+  font-size: 45px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-black);
+  transition: var(--transition);
+
+  &:hover {
+    color: var(--color-cyan-dark);
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

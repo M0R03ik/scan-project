@@ -1,0 +1,164 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  max-height: 700px;
+  height: 100%;
+
+  padding: 19px 30px 35px;
+  font-size: 16px;
+  max-width: 641px;
+  border-radius: var(--border-radius-large);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+
+  @media screen and (max-width: 1024px) {
+    padding: 19px;
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: 880px) {
+    max-width: fit-content;
+  }
+}
+
+.header {
+  margin-bottom: 14px;
+}
+
+.cardInfo {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+  opacity: 0.5;
+
+  @media screen and (max-width: 880px) {
+    max-width: fit-content;
+  }
+
+  @media screen and (max-width: 480px) {
+    column-gap: 9px;
+  }
+}
+
+.link {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+
+.title {
+  margin-top: 24px;
+  margin-bottom: 14px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 26px;
+  max-width: 546px;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 19px;
+    margin-block: 20px;
+  }
+
+  @media screen and (max-width: 480px) {
+    margin-block: 20px;
+    font-size: 19px;
+  }
+}
+
+.tagsWrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+
+  @media screen and (max-width: 1024px) {
+    column-gap: 9px;
+  }
+}
+
+.tag {
+  padding: 4px 12px;
+  font-size: 12px;
+  border-radius: var(--border-radius);
+  background-color: var(--color-gold);
+
+  @media screen and (max-width: 1024px) {
+    font-size: 10px;
+  }
+}
+
+.cardBody {
+  flex-basis: 100%;
+  overflow: hidden;
+}
+
+.cardFigure {
+  margin: 0;
+  margin-bottom: 20px;
+  width: 100%;
+  border-radius: var(--border-radius-large);
+  overflow: hidden;
+
+  @media screen and (max-width: 480px) {
+    margin-bottom: 18px;
+  }
+}
+
+.image {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 158px;
+}
+
+.cardCopy {
+  margin: 0;
+  opacity: 0.5;
+  overflow: hidden;
+  max-height: 220px;
+
+  img {
+    display: none;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 12px;
+    letter-spacing: 0.01em;
+  }
+}
+
+.footer {
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  column-gap: 15px;
+
+  @media screen and (max-width: 480px) {
+    margin-top: 25px;
+  }
+}
+
+.cardActions {
+  max-width: 223px;
+  width: 100%;
+
+  @media screen and (max-width: 480px) {
+    max-width: 195px;
+  }
+}
+
+.button {
+  padding: 14px;
+  width: 100%;
+  font-size: 16px;
+  color: var(--color-black);
+  background-color: var(--color-cyan);
+
+  @media screen and (max-width: 480px) {
+    font-size: 14px;
+    letter-spacing: 0.01em;
+  }
+}
+
+.wordCount {
+  opacity: 0.5;
+  flex-shrink: 0;
+}

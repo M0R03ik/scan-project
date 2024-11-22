@@ -1,0 +1,103 @@
+.arrow {
+  position: absolute;
+  top: calc(50% - 19px);
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.4;
+  }
+}
+
+.prevArrow {
+  left: -176px;
+  transform: scale(-1, 1);
+
+  @media screen and (max-width: 800px) {
+    left: -167px;
+  }
+
+  @media screen and (max-width: 600px) {
+    left: -39px;
+  }
+}
+
+.nextArrow {
+  right: -45px;
+
+  @media screen and (max-width: 600px) {
+    right: -39px;
+  }
+}
+
+.carouselContainer {
+  margin-bottom: 107px;
+  padding-inline: 34px;
+  position: relative;
+
+  @media screen and (max-width: 550px) {
+    padding-inline: 24px;
+  }
+}
+
+.resultTable {
+  display: flex;
+  border: 2px solid var(--color-cyan-dark);
+  border-radius: var(--border-radius-large);
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+  }
+}
+
+.tableHeader {
+  padding: 17px 27px;
+  background-color: var(--color-cyan-dark);
+  color: var(--color-white);
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 26px;
+
+  @media screen and (max-width: 800px) {
+    font-size: 18px;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 23px 16px;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 0;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+  }
+
+  div {
+    font-weight: inherit;
+  }
+}
+
+.tableBody {
+  padding-block: 18px;
+  max-width: calc(100% - 131px);
+  width: 100%;
+
+  @media screen and (max-width: 800px) {
+    max-width: calc(100% - 124px);
+  }
+
+  @media screen and (max-width: 600px) {
+    padding-top: 18px;
+    padding-bottom: 28px;
+    max-width: 100%;
+  }
+}
